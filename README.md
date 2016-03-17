@@ -1,1 +1,2 @@
-angular-test project
+README for angular-test
+*****
