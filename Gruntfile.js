@@ -72,7 +72,7 @@ module.exports = function (grunt) {
                     keepalive: true,
                     hostname: '*',
                     base: {
-                        path: '.',
+                        path: 'src',
                         options:{
 
                         }
@@ -176,17 +176,20 @@ module.exports = function (grunt) {
             }
         },
         watch: {
-            livereload: {
+            options: {
+                livereload: true
+            },
+            files: ['src/**/*.html'],
+            css: {
+                files: ['src/assets/css/**/*.css'],
+                tasks: ['csslint']
+            },
+            scripts: {
+                files: ['src/**/*.js'],
+                tasks: ['jshint'],
                 options: {
                     spawn: false
-                },
-                tasks: ['jshint', 'htmlhint', 'csslint'],
-                files: [  //下面文件的改变就会实时刷新网页
-                    'html/**/*.html',
-                    'css/**/*.css',
-                    'js/**/*.js',
-                    'img/**/*.{png,jpg,gif,jpeg,ico}'
-                ]
+                }
             }
         },
         htmlhint: {
