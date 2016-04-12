@@ -58,11 +58,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-a:link{
-  text-decoration: none;
-  outline: dotted 1px;
-  color: #f00;
-  font-size: 1.6em;
+li, span {
+  border: 1px solid #eee;
+  padding: 5px;
 }
-
-

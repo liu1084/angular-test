@@ -1,7 +1,9 @@
 /**
  * Created by liqing on 2016/4/4.
+ *
+ * http://www.bradoncode.com/blog/2015/07/13/unit-test-promises-angualrjs-q/
  */
-ScrumModule.factory('User', ['$log', function($log, name){
+ScrumModule.factory('PersonService', ['$log', function($log){
     var Person = function(name){
         this.eat = function(food){
             $log.info(name + ' is eating delicious ' + food);

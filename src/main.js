@@ -3,4 +3,4 @@
  *
  */
 var ScrumModule = angular.module('Scrum', ['ngResource']);
-ScrumModule.constant('dbConnection', 'http://localhost:3000');
+ScrumModule.constant('dbConnection', 'http://localhost\\:3000');

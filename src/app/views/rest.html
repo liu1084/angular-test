@@ -29,17 +29,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>angular-test -- rest</title>
-    <link rel="shortcut icon" href="assets/img/favicon.ico"/>
-    <link rel="stylesheet" href="assets/css/screen.css"/>
+    <link rel="shortcut icon" href="../../assets/img/favicon.ico"/>
+    <link rel="stylesheet" href="../../assets/css/screen.css"/>
 </head>
 <body ng-app="Scrum">
-<div ng-controller="UserCtrl"></div>
+<div ng-controller="UserCtrl">
+    <button ng-click="getAllUsers()">get all</button>
+    <button ng-click="createUser()">create new one</button>
+    <button ng-click="getUserByEmail()">get the one</button>
+    <button ng-click="deleteUserByEmail()">delete the one</button>
+
+    <div>
+        <ul>
+            <li ng-repeat="user in users">
+                <span>id:{{user._id}}</span>
+                <span>item:{{user.item}}</span>
+                <span ng-repeat="d in user.details">{{d}}</span>
+                <span><button ng-click="deleteUserByEmail()" id="{{user._id}}">Delete</button></span>
+            </li>
+        </ul>
+    </div>
+</div>
 <!-- Javascript start -->
-<script src="../vendor/angular/angular.js"></script>
-<script src="../node_modules/angular-resource/angular-resource.js"></script>
-<script src="main.js"></script>
-<script src="rest/User.js"></script>
-<script src="rest/UserCtrl.js"></script>
+<script src="../../../vendor/angular/angular.js"></script>
+<script src="../../../node_modules/angular-resource/angular-resource.js"></script>
+<script src="../../main.js"></script>
+<script src="../services/rest/User.js"></script>
+<script src="../services/rest/UserCtrl.js"></script>
 <!-- Javascript end -->
 </body>
 </html>

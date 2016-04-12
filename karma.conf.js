@@ -19,8 +19,8 @@ module.exports = function (config) {
             'node_modules/angular-resource/angular-resource.js',
             'node_modules/angular-mocks/angular-mocks.js',
             'src/main.js',
-            'src/q/Person.js',
-            'test/**/*.js'
+            'src/app/**/*.js',
+            'src/test/**/*.js'
         ],
 
 
